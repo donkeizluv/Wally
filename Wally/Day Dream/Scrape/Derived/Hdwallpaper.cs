@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Wally.HTML;
+﻿using HtmlAgilityPack;
+using System.Collections.Generic;
 
 namespace Wally.Day_Dream.Scrape.Derived
 {

@@ -19,3 +19,14 @@ D:\inDev\Source_Controlled\Wally\Wally_diagnostic\obj\Debug\Wally_diagnostic.Pro
 D:\inDev\Source_Controlled\Wally\Wally_diagnostic\obj\Debug\Wally_diagnostic.csproj.GenerateResource.Cache
 D:\inDev\Source_Controlled\Wally\Wally_diagnostic\obj\Debug\Wally_diagnostic.exe
 D:\inDev\Source_Controlled\Wally\Wally_diagnostic\obj\Debug\Wally_diagnostic.pdb
+D:\SourceControlled\Wally\Wally_diagnostic\obj\Debug\Wally_diagnostic.csprojResolveAssemblyReference.cache
+D:\SourceControlled\Wally\Wally_diagnostic\obj\Debug\Wally_diagnostic.Properties.Resources.resources
+D:\SourceControlled\Wally\Wally_diagnostic\obj\Debug\Wally_diagnostic.csproj.GenerateResource.Cache
+D:\SourceControlled\Wally\Wally_diagnostic\obj\Debug\Wally_diagnostic.exe
+D:\SourceControlled\Wally\Wally_diagnostic\obj\Debug\Wally_diagnostic.pdb
+D:\SourceControlled\Wally\Wally_diagnostic\bin\Debug\Wally_diagnostic.exe.config
+D:\SourceControlled\Wally\Wally_diagnostic\bin\Debug\Wally_diagnostic.exe
+D:\SourceControlled\Wally\Wally_diagnostic\bin\Debug\Wally_diagnostic.pdb
+D:\SourceControlled\Wally\Wally_diagnostic\bin\Debug\Wally.exe
+D:\SourceControlled\Wally\Wally_diagnostic\bin\Debug\Wally.pdb
+D:\SourceControlled\Wally\Wally_diagnostic\bin\Debug\Wally.exe.config

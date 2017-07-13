@@ -73,6 +73,13 @@
     <OutputPath>bin\test\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Costura, Version=1.6.2.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>packages\Costura.Fody.1.6.2\lib\dotnet\Costura.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.5.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>packages\HtmlAgilityPack.1.5.1\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -131,39 +138,6 @@
     <Compile Include="Day Dream\Helpers\Downloader.cs" />
     <Compile Include="Day Dream\Favorite\FavoriteSaver.cs" />
     <Compile Include="ExeChecker\ExeChecker.cs" />
-    <Compile Include="HTML\AttributeValueQuote.cs" />
-    <Compile Include="HTML\crc32.cs" />
-    <Compile Include="HTML\EncodingFoundException.cs" />
-    <Compile Include="HTML\HtmlAttribute.cs" />
-    <Compile Include="HTML\HtmlAttributeCollection.cs" />
-    <Compile Include="HTML\HtmlCmdLine.cs" />
-    <Compile Include="HTML\HtmlCommentNode.cs" />
-    <Compile Include="HTML\HtmlConsoleListener.cs" />
-    <Compile Include="HTML\HtmlDocument.cs" />
-    <Compile Include="HTML\HtmlElementFlag.cs" />
-    <Compile Include="HTML\HtmlEntity.cs" />
-    <Compile Include="HTML\HtmlNameTable.cs" />
-    <Compile Include="HTML\HtmlNode.cs" />
-    <Compile Include="HTML\HtmlNodeCollection.cs" />
-    <Compile Include="HTML\HtmlNodeNavigator.cs" />
-    <Compile Include="HTML\HtmlNodeType.cs" />
-    <Compile Include="HTML\HtmlParseError.cs" />
-    <Compile Include="HTML\HtmlParseErrorCode.cs" />
-    <Compile Include="HTML\HtmlTextNode.cs" />
-    <Compile Include="HTML\HtmlWeb.cs" />
-    <Compile Include="HTML\HtmlWebException.cs" />
-    <Compile Include="HTML\IOLibrary.cs" />
-    <Compile Include="HTML\IPermissionHelper.cs" />
-    <Compile Include="HTML\MixedCodeDocument.cs" />
-    <Compile Include="HTML\MixedCodeDocumentCodeFragment.cs" />
-    <Compile Include="HTML\MixedCodeDocumentFragment.cs" />
-    <Compile Include="HTML\MixedCodeDocumentFragmentList.cs" />
-    <Compile Include="HTML\MixedCodeDocumentFragmentType.cs" />
-    <Compile Include="HTML\MixedCodeDocumentTextFragment.cs" />
-    <Compile Include="HTML\NameValuePairList.cs" />
-    <Compile Include="HTML\PermissionHelper.cs" />
-    <Compile Include="HTML\Trace.cs" />
-    <Compile Include="HTML\Utilities.cs" />
     <Compile Include="LiteDB\Core\Collections\Aggregate.cs" />
     <Compile Include="LiteDB\Core\Collections\AutoId.cs" />
     <Compile Include="LiteDB\Core\Collections\Delete.cs" />
@@ -349,6 +323,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -379,7 +354,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="HTML\ver 1495.txt" />
+    <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -400,4 +375,13 @@
     <RemoveDir Directories="$(BaseOutputPath)" />
     <RemoveDir Directories="bin\Release\" />
   </Target>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Costura.Fody.1.6.2\build\dotnet\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.1.6.2\build\dotnet\Costura.Fody.targets'))" />
+    <Error Condition="!Exists('packages\Fody.2.1.0\build\netstandard1.0\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Fody.2.1.0\build\netstandard1.0\Fody.targets'))" />
+  </Target>
+  <Import Project="packages\Costura.Fody.1.6.2\build\dotnet\Costura.Fody.targets" Condition="Exists('packages\Costura.Fody.1.6.2\build\dotnet\Costura.Fody.targets')" />
+  <Import Project="packages\Fody.2.1.0\build\netstandard1.0\Fody.targets" Condition="Exists('packages\Fody.2.1.0\build\netstandard1.0\Fody.targets')" />
 </Project>

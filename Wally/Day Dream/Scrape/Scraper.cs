@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Wally.Day_Dream.Scrape.Helpers;
-using Wally.HTML;
+using HtmlAgilityPack;
 
 namespace Wally.Day_Dream.Scrape
 {
