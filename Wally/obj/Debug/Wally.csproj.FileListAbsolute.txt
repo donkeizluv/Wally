@@ -1,0 +1,46 @@
+D:\Dev\Wally\Wally\bin\Debug\Wally.exe.config
+D:\Dev\Wally\Wally\obj\Debug\Wally.csprojResolveAssemblyReference.cache
+D:\Dev\Wally\Wally\obj\Debug\Day Dream\Controls\ImageCell.g.cs
+D:\Dev\Wally\Wally\obj\Debug\Day Dream\Controls\Curtain.g.cs
+D:\Dev\Wally\Wally\obj\Debug\Day Dream\DayDream.g.cs
+D:\Dev\Wally\Wally\obj\Debug\MainWindow.g.cs
+D:\Dev\Wally\Wally\obj\Debug\UpdateWindow.g.cs
+D:\Dev\Wally\Wally\obj\Debug\App.g.cs
+D:\Dev\Wally\Wally\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Dev\Wally\Wally\obj\Debug\Wally_MarkupCompile.cache
+D:\Dev\Wally\Wally\obj\Debug\Wally_MarkupCompile.lref
+D:\Dev\Wally\Wally\bin\Debug\Wally.exe
+D:\Dev\Wally\Wally\bin\Debug\Wally.pdb
+D:\Dev\Wally\Wally\obj\Debug\Day Dream\Controls\ImageCell.baml
+D:\Dev\Wally\Wally\obj\Debug\Day Dream\Controls\Curtain.baml
+D:\Dev\Wally\Wally\obj\Debug\Day Dream\DayDream.baml
+D:\Dev\Wally\Wally\obj\Debug\MainWindow.baml
+D:\Dev\Wally\Wally\obj\Debug\UpdateWindow.baml
+D:\Dev\Wally\Wally\obj\Debug\Wally.g.resources
+D:\Dev\Wally\Wally\obj\Debug\Wally.Properties.Resources.resources
+D:\Dev\Wally\Wally\obj\Debug\Wally.csproj.GenerateResource.Cache
+D:\Dev\Wally\Wally\obj\Debug\Wally.exe
+D:\Dev\Wally\Wally\obj\Debug\Wally.pdb
+D:\inDev\Source_Controlled\Wally\Wally\bin\Debug\Wally.exe.config
+D:\inDev\Source_Controlled\Wally\Wally\bin\Debug\Wally.exe
+D:\inDev\Source_Controlled\Wally\Wally\bin\Debug\Wally.pdb
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Wally.csprojResolveAssemblyReference.cache
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Day Dream\Controls\ImageCell.g.cs
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Day Dream\Controls\Curtain.g.cs
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Day Dream\DayDream.g.cs
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\MainWindow.g.cs
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\UpdateWindow.g.cs
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\App.g.cs
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Wally_MarkupCompile.cache
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Wally_MarkupCompile.lref
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Day Dream\Controls\ImageCell.baml
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Day Dream\Controls\Curtain.baml
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Day Dream\DayDream.baml
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\MainWindow.baml
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\UpdateWindow.baml
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Wally.g.resources
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Wally.Properties.Resources.resources
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Wally.csproj.GenerateResource.Cache
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Wally.exe
+D:\inDev\Source_Controlled\Wally\Wally\obj\Debug\Wally.pdb

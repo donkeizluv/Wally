@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D364C769-DF5B-4DAB-B5F3-BA25BF178B28}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wally</RootNamespace>
+    <AssemblyName>Wally</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Res\Wally.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Force update|AnyCPU'">
+    <OutputPath>bin\Force update\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'test|AnyCPU'">
+    <OutputPath>bin\test\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Day Dream\Controls\ColorfulProgressBar.cs" />
+    <Compile Include="Day Dream\EventArgs.cs" />
+    <Compile Include="Day Dream\Favorite\Favorite.cs" />
+    <Compile Include="Day Dream\Controls\ImageCell.xaml.cs">
+      <DependentUpon>ImageCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Day Dream\Interfaces\IPictureDataProvider.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Desktopnexus.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Socwall.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Wallpaperfx.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Suwalls.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Pexels.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Wallhaven.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Thepaperwall.cs" />
+    <Compile Include="Day Dream\Scrape\Helpers\ExcludeList.cs" />
+    <Compile Include="Day Dream\Scrape\Scraper.cs" />
+    <Compile Include="Day Dream\Scrape\Helpers\CrytoRNG.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Aphacoders.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Goodfon.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Hdwallpaper.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Interfacelift.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Wallpaperscraft.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Wallpaperstock.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\Wallpaperwide.cs" />
+    <Compile Include="Day Dream\Scrape\Derived\_TEMPLATE.cs" />
+    <Compile Include="Day Dream\Scrape\Helpers\ReflectiveEnumerator.cs" />
+    <Compile Include="Day Dream\Controls\Curtain.xaml.cs">
+      <DependentUpon>Curtain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Day Dream\DayDream.xaml.cs">
+      <DependentUpon>DayDream.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Day Dream\ExManager.cs" />
+    <Compile Include="Day Dream\Helpers\GetDataAsync.cs" />
+    <Compile Include="Day Dream\Extentions.cs" />
+    <Compile Include="Day Dream\PictureData.cs" />
+    <Compile Include="Day Dream\DayDreamDataProvider.cs" />
+    <Compile Include="Day Dream\Helpers\DesktopWallpaperHelper.cs" />
+    <Compile Include="Day Dream\Helpers\Downloader.cs" />
+    <Compile Include="Day Dream\Favorite\FavoriteSaver.cs" />
+    <Compile Include="ExeChecker\ExeChecker.cs" />
+    <Compile Include="HTML\AttributeValueQuote.cs" />
+    <Compile Include="HTML\crc32.cs" />
+    <Compile Include="HTML\EncodingFoundException.cs" />
+    <Compile Include="HTML\HtmlAttribute.cs" />
+    <Compile Include="HTML\HtmlAttributeCollection.cs" />
+    <Compile Include="HTML\HtmlCmdLine.cs" />
+    <Compile Include="HTML\HtmlCommentNode.cs" />
+    <Compile Include="HTML\HtmlConsoleListener.cs" />
+    <Compile Include="HTML\HtmlDocument.cs" />
+    <Compile Include="HTML\HtmlElementFlag.cs" />
+    <Compile Include="HTML\HtmlEntity.cs" />
+    <Compile Include="HTML\HtmlNameTable.cs" />
+    <Compile Include="HTML\HtmlNode.cs" />
+    <Compile Include="HTML\HtmlNodeCollection.cs" />
+    <Compile Include="HTML\HtmlNodeNavigator.cs" />
+    <Compile Include="HTML\HtmlNodeType.cs" />
+    <Compile Include="HTML\HtmlParseError.cs" />
+    <Compile Include="HTML\HtmlParseErrorCode.cs" />
+    <Compile Include="HTML\HtmlTextNode.cs" />
+    <Compile Include="HTML\HtmlWeb.cs" />
+    <Compile Include="HTML\HtmlWebException.cs" />
+    <Compile Include="HTML\IOLibrary.cs" />
+    <Compile Include="HTML\IPermissionHelper.cs" />
+    <Compile Include="HTML\MixedCodeDocument.cs" />
+    <Compile Include="HTML\MixedCodeDocumentCodeFragment.cs" />
+    <Compile Include="HTML\MixedCodeDocumentFragment.cs" />
+    <Compile Include="HTML\MixedCodeDocumentFragmentList.cs" />
+    <Compile Include="HTML\MixedCodeDocumentFragmentType.cs" />
+    <Compile Include="HTML\MixedCodeDocumentTextFragment.cs" />
+    <Compile Include="HTML\NameValuePairList.cs" />
+    <Compile Include="HTML\PermissionHelper.cs" />
+    <Compile Include="HTML\Trace.cs" />
+    <Compile Include="HTML\Utilities.cs" />
+    <Compile Include="LiteDB\Core\Collections\Aggregate.cs" />
+    <Compile Include="LiteDB\Core\Collections\AutoId.cs" />
+    <Compile Include="LiteDB\Core\Collections\Delete.cs" />
+    <Compile Include="LiteDB\Core\Collections\Find.cs" />
+    <Compile Include="LiteDB\Core\Collections\Include.cs" />
+    <Compile Include="LiteDB\Core\Collections\Index.cs" />
+    <Compile Include="LiteDB\Core\Collections\Insert.cs" />
+    <Compile Include="LiteDB\Core\Collections\LiteCollection.cs" />
+    <Compile Include="LiteDB\Core\Collections\Stats.cs" />
+    <Compile Include="LiteDB\Core\Collections\Update.cs" />
+    <Compile Include="LiteDB\Core\Database\Collection.cs" />
+    <Compile Include="LiteDB\Core\Database\DbVersion.cs" />
+    <Compile Include="LiteDB\Core\Database\FileStorage.cs" />
+    <Compile Include="LiteDB\Core\Database\OnModelCreating.cs" />
+    <Compile Include="LiteDB\Core\Database\Shell.cs" />
+    <Compile Include="LiteDB\Core\Database\Utils.cs" />
+    <Compile Include="LiteDB\Core\LiteDatabase.cs" />
+    <Compile Include="LiteDB\DbEngine\Actions\Aggregate.cs" />
+    <Compile Include="LiteDB\DbEngine\Actions\Collection.cs" />
+    <Compile Include="LiteDB\DbEngine\Actions\DbParams.cs" />
+    <Compile Include="LiteDB\DbEngine\Actions\Delete.cs" />
+    <Compile Include="LiteDB\DbEngine\Actions\Dump.cs" />
+    <Compile Include="LiteDB\DbEngine\Actions\Find.cs" />
+    <Compile Include="LiteDB\DbEngine\Actions\Index.cs" />
+    <Compile Include="LiteDB\DbEngine\Actions\Insert.cs" />
+    <Compile Include="LiteDB\DbEngine\Actions\Shrink.cs" />
+    <Compile Include="LiteDB\DbEngine\Actions\Stats.cs" />
+    <Compile Include="LiteDB\DbEngine\Actions\Update.cs" />
+    <Compile Include="LiteDB\DbEngine\DbEngine.cs" />
+    <Compile Include="LiteDB\DbEngine\Disks\EncryptedDiskService.cs" />
+    <Compile Include="LiteDB\DbEngine\Disks\FileDiskService.cs" />
+    <Compile Include="LiteDB\DbEngine\Disks\IDiskService.cs" />
+    <Compile Include="LiteDB\DbEngine\Disks\StreamDiskService.cs" />
+    <Compile Include="LiteDB\DbEngine\Pages\BasePage.cs" />
+    <Compile Include="LiteDB\DbEngine\Pages\CollectionPage.cs" />
+    <Compile Include="LiteDB\DbEngine\Pages\DataPage.cs" />
+    <Compile Include="LiteDB\DbEngine\Pages\EmptyPage.cs" />
+    <Compile Include="LiteDB\DbEngine\Pages\ExtendPage.cs" />
+    <Compile Include="LiteDB\DbEngine\Pages\HeaderPage.cs" />
+    <Compile Include="LiteDB\DbEngine\Pages\IndexPage.cs" />
+    <Compile Include="LiteDB\DbEngine\Services\CacheService.cs" />
+    <Compile Include="LiteDB\DbEngine\Services\CollectionService.cs" />
+    <Compile Include="LiteDB\DbEngine\Services\DataService.cs" />
+    <Compile Include="LiteDB\DbEngine\Services\IndexService.cs" />
+    <Compile Include="LiteDB\DbEngine\Services\PageService.cs" />
+    <Compile Include="LiteDB\DbEngine\Services\TransactionService.cs" />
+    <Compile Include="LiteDB\DbEngine\Structures\CollectionIndex.cs" />
+    <Compile Include="LiteDB\DbEngine\Structures\DataBlock.cs" />
+    <Compile Include="LiteDB\DbEngine\Structures\DbParams.cs" />
+    <Compile Include="LiteDB\DbEngine\Structures\IndexNode.cs" />
+    <Compile Include="LiteDB\DbEngine\Structures\IndexOptions.cs" />
+    <Compile Include="LiteDB\DbEngine\Structures\PageAddress.cs" />
+    <Compile Include="LiteDB\Document\BsonArray.cs" />
+    <Compile Include="LiteDB\Document\BsonDocument.cs" />
+    <Compile Include="LiteDB\Document\BsonType.cs" />
+    <Compile Include="LiteDB\Document\BsonValue.cs" />
+    <Compile Include="LiteDB\Document\ObjectId.cs" />
+    <Compile Include="LiteDB\FileStorage\LiteFileInfo.cs" />
+    <Compile Include="LiteDB\FileStorage\LiteFileStorage.cs" />
+    <Compile Include="LiteDB\FileStorage\LiteFileStream.cs" />
+    <Compile Include="LiteDB\Query\Impl\QueryAll.cs" />
+    <Compile Include="LiteDB\Query\Impl\QueryAnd.cs" />
+    <Compile Include="LiteDB\Query\Impl\QueryBetween.cs" />
+    <Compile Include="LiteDB\Query\Impl\QueryContains.cs" />
+    <Compile Include="LiteDB\Query\Impl\QueryEmpty.cs" />
+    <Compile Include="LiteDB\Query\Impl\QueryEquals.cs" />
+    <Compile Include="LiteDB\Query\Impl\QueryGreater.cs" />
+    <Compile Include="LiteDB\Query\Impl\QueryIn.cs" />
+    <Compile Include="LiteDB\Query\Impl\QueryLess.cs" />
+    <Compile Include="LiteDB\Query\Impl\QueryNot.cs" />
+    <Compile Include="LiteDB\Query\Impl\QueryOr.cs" />
+    <Compile Include="LiteDB\Query\Impl\QueryStartsWith.cs" />
+    <Compile Include="LiteDB\Query\Linq\QueryVisitor.cs" />
+    <Compile Include="LiteDB\Query\Query.cs" />
+    <Compile Include="LiteDB\Serializer\Bson\BsonReader.cs" />
+    <Compile Include="LiteDB\Serializer\Bson\BsonSerializer.cs" />
+    <Compile Include="LiteDB\Serializer\Bson\BsonWriter.cs" />
+    <Compile Include="LiteDB\Serializer\Json\JsonReader.cs" />
+    <Compile Include="LiteDB\Serializer\Json\JsonSerializer.cs" />
+    <Compile Include="LiteDB\Serializer\Json\JsonTokenizer.cs" />
+    <Compile Include="LiteDB\Serializer\Json\JsonWriter.cs" />
+    <Compile Include="LiteDB\Serializer\Mapper\BsonFieldAttribute.cs" />
+    <Compile Include="LiteDB\Serializer\Mapper\BsonIdAttribute.cs" />
+    <Compile Include="LiteDB\Serializer\Mapper\BsonIgnoreAttribute.cs" />
+    <Compile Include="LiteDB\Serializer\Mapper\BsonIndexAttribute.cs" />
+    <Compile Include="LiteDB\Serializer\Mapper\BsonMapper.cs" />
+    <Compile Include="LiteDB\Serializer\Mapper\BsonMapper.Deserialize.cs" />
+    <Compile Include="LiteDB\Serializer\Mapper\BsonMapper.Serialize.cs" />
+    <Compile Include="LiteDB\Serializer\Mapper\EntityBuilder.cs" />
+    <Compile Include="LiteDB\Serializer\Mapper\PropertyMapper.cs" />
+    <Compile Include="LiteDB\Serializer\Mapper\Reflection.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\BaseCollection.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\Bulk.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\Count.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\Delete.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\Drop.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\DropIndex.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\EnsureIndex.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\Find.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\Indexes.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\Insert.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\Max.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\Min.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\Rename.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\Stats.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Collections\Update.cs" />
+    <Compile Include="LiteDB\Shell\Commands\FileStoage\BaseFileStorage.cs" />
+    <Compile Include="LiteDB\Shell\Commands\FileStoage\Delete.cs" />
+    <Compile Include="LiteDB\Shell\Commands\FileStoage\Download.cs" />
+    <Compile Include="LiteDB\Shell\Commands\FileStoage\Find.cs" />
+    <Compile Include="LiteDB\Shell\Commands\FileStoage\Update.cs" />
+    <Compile Include="LiteDB\Shell\Commands\FileStoage\Upload.cs" />
+    <Compile Include="LiteDB\Shell\Commands\IShellCommand.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Others\Comment.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Others\DiskDump.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Others\ShowCollections.cs" />
+    <Compile Include="LiteDB\Shell\Commands\Others\Shrink.cs" />
+    <Compile Include="LiteDB\Shell\LiteShell.cs" />
+    <Compile Include="LiteDB\Utils\BinaryExtensions.cs" />
+    <Compile Include="LiteDB\Utils\ByteReader.cs" />
+    <Compile Include="LiteDB\Utils\ByteWriter.cs" />
+    <Compile Include="LiteDB\Utils\ConnectionString.cs" />
+    <Compile Include="LiteDB\Utils\DictionaryExtensions.cs" />
+    <Compile Include="LiteDB\Utils\ExpressionExtensions.cs" />
+    <Compile Include="LiteDB\Utils\IndexNotFoundException.cs" />
+    <Compile Include="LiteDB\Utils\IOExceptionExtensions.cs" />
+    <Compile Include="LiteDB\Utils\LazyLoad.cs" />
+    <Compile Include="LiteDB\Utils\LiteException.cs" />
+    <Compile Include="LiteDB\Utils\Logger.cs" />
+    <Compile Include="LiteDB\Utils\MimeTypeConverter.cs" />
+    <Compile Include="LiteDB\Utils\SimpleAES.cs" />
+    <Compile Include="LiteDB\Utils\StreamExtensions.cs" />
+    <Compile Include="LiteDB\Utils\StringExtensions.cs" />
+    <Compile Include="LiteDB\Utils\StringScanner.cs" />
+    <Compile Include="UpdateWindow.xaml.cs">
+      <DependentUpon>UpdateWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Day Dream\Controls\ImageCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Day Dream\Controls\Curtain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Day Dream\DayDream.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UpdateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Wally.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HTML\ver 1495.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="SpicNSpan" AfterTargets="Clean">
+    <!-- Remove obj folder -->
+    <RemoveDir Directories="$(BaseIntermediateOutputPath)" />
+    <!-- Remove bin folder -->
+    <RemoveDir Directories="$(BaseOutputPath)" />
+    <RemoveDir Directories="bin\Release\" />
+  </Target>
+</Project>

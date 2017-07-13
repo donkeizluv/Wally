@@ -1,0 +1,10 @@
+D:\Dev\Wally\Wally_diagnostic\bin\Release\Wally_diagnostic.exe.config
+D:\Dev\Wally\Wally_diagnostic\bin\Release\Wally_diagnostic.exe
+D:\Dev\Wally\Wally_diagnostic\bin\Release\Wally_diagnostic.pdb
+D:\Dev\Wally\Wally_diagnostic\bin\Release\Wally.exe
+D:\Dev\Wally\Wally_diagnostic\bin\Release\Wally.pdb
+D:\Dev\Wally\Wally_diagnostic\obj\Release\Wally_diagnostic.csprojResolveAssemblyReference.cache
+D:\Dev\Wally\Wally_diagnostic\obj\Release\Wally_diagnostic.Properties.Resources.resources
+D:\Dev\Wally\Wally_diagnostic\obj\Release\Wally_diagnostic.csproj.GenerateResource.Cache
+D:\Dev\Wally\Wally_diagnostic\obj\Release\Wally_diagnostic.exe
+D:\Dev\Wally\Wally_diagnostic\obj\Release\Wally_diagnostic.pdb
